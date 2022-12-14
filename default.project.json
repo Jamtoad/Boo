@@ -1,0 +1,24 @@
+{
+  "name": "DetectiveGame",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Startup": {
+      	"$path": "Data/Startup"
+      },
+      
+      "Systems": {
+      	"$path": "Data/Systems"
+      },
+      
+      "Libraries": {
+        "$path": "Data/Libraries"
+      }
+    },
+    
+    "ServerStorage": {
+    	"$path": "Data/Storage"
+    }
+  }
+}
