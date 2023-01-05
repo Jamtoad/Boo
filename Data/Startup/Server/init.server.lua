@@ -12,4 +12,5 @@ local SYSTEMS = REPLICATED_STORAGE:WaitForChild("Systems")
 do
     BULLFROG.setupSystems(SYSTEMS)
     BULLFROG.start()
+    warn("Bullfrog server started!")
 end

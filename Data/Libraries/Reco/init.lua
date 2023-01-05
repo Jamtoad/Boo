@@ -1,11 +1,18 @@
---[[
-    Reco
-    Version 1
-    Started on 10/25/2022
-]]
+-- Reco | Version 2
+-- Version 1: Initial release.
+-- Version 2: Restructure and comments added!
 
--- Root
-local RECO = {}
+--[[
+    Description - Recursively loops through a table and runs the specified
+    function
+    
+    Parameters -
+        [table] tbl - The table to iterate through
+        [function] fn - The function to run upon each iteration
+        [tuple] ... - Any arguments to pass through to the function
+
+    Returns - Return anything the called function returns or nil
+]]
 
 -- Local Functions
 local function iterate(tbl, last, fn, ...)
@@ -18,9 +25,8 @@ local function iterate(tbl, last, fn, ...)
     return iterate(tbl, _key, fn, fn(_key, _value, ...))
 end
 
--- Global Functions
-function RECO.each(tbl, fn, ...)
+function each(tbl, fn, ...)
     return iterate(tbl, nil, fn, ...)
 end
 
-return RECO
+return each

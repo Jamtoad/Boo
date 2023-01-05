@@ -1,5 +1,5 @@
 {
-  "name": "DetectiveGame",
+  "name": "Boo!",
   "tree": {
     "$className": "DataModel",
 
@@ -14,11 +14,14 @@
       
       "Libraries": {
         "$path": "Data/Libraries"
-      }
-    },
-    
-    "ServerStorage": {
-    	"$path": "Data/Storage"
+      },
+      
+      "Storage": {
+      	"$path": "Data/Storage",
+      	"$ignoreUnknownInstances": true
+      },
+      
+      "$ignoreUnknownInstances": true
     }
   }
 }

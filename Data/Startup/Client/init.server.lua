@@ -9,12 +9,12 @@ local BULLFROG = require(LIBRARIES:WaitForChild("Bullfrog"))
 -- Constants
 local SYSTEMS = REPLICATED_STORAGE:WaitForChild("Systems")
 
+local PLAYER = PLAYERS.LocalPlayer
+local CHARACTER = PLAYER.Character or PLAYER.CharacterAdded:Wait()
+
 -- Startup
-do
-    if not PLAYERS.LocalPlayer.Character then
-        PLAYERS.LocalPlayer.CharacterAdded:Wait()
-    end
-    
+do    
     BULLFROG.setupSystems(SYSTEMS)
     BULLFROG.start()
+    warn("Bullfrog client started!")
 end
